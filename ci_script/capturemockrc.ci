@@ -1,0 +1,5 @@
+[command line]
+intercepts = git
+
+[python]
+intercepts = smtplib

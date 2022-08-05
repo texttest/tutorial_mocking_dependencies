@@ -1,0 +1,5 @@
+<-CMD:cd /users/geoff/.texttest/tmp/ci.23Feb152437.16806/ci/NoChanges/source; git pull -u ../repo
+->FIL:source
+->OUT:pulling from ../repo
+searching for changes
+no changes found

@@ -1,0 +1,38 @@
+<-PYT:import smtplib
+<-PYT:smtplib.__path__
+->RET:raise exceptions.AttributeError("'module' object has no attribute '__path__'")
+<-PYT:smtplib.SMTP()
+->RET:Instance('SMTP', 'smtp1')
+<-PYT:smtp1.connect('localhost')
+->RET:(220, 'got001865.jeppesensystems.com ESMTP Sendmail 8.14.4/8.14.4; Mon, 23 Feb 2015 16:00:25 +0100')
+<-PYT:smtp1.sendmail('geoff@localhost', 'geoff', """From: geoff@localhost
+To: geoff
+Subject: The build is broken - please check!
+
+Short information about the errors in log file 
+'logs/.build20150223160256/log.localhost' : 
+
+ => /users/geoff/.texttest/tmp/ci.23Feb160253.19719/ci/BuildFails/source/main.c: In function 'main':
+/users/geoff/.texttest/tmp/ci.23Feb160253.19719/ci/BuildFails/source/main.c:7: error: expected ';' before 'return'
+""")
+->RET:{}
+<-PYT:smtp1.quit()
+->RET:(221, '2.0.0 got001865.jeppesensystems.com closing connection')
+<-PYT:smtplib.SMTP()
+->RET:Instance('SMTP', 'smtp2')
+<-PYT:smtp2.connect('localhost')
+->RET:(220, 'got001865.jeppesensystems.com ESMTP Sendmail 8.14.4/8.14.4; Mon, 23 Feb 2015 16:00:26 +0100')
+<-PYT:smtp2.sendmail('geoff@localhost', 'geoff', """From: geoff@localhost
+To: geoff
+Subject: The build is broken - please check!
+
+Short information about the errors in log file 
+'logs/.build20150223160256/log.my_other_machine' : 
+
+ => Running remotely on my_other_machine
+/users/geoff/.texttest/tmp/ci.23Feb160253.19719/ci/BuildFails/source/main.c: In function 'main':
+/users/geoff/.texttest/tmp/ci.23Feb160253.19719/ci/BuildFails/source/main.c:7: error: expected ';' before 'return'
+""")
+->RET:{}
+<-PYT:smtp2.quit()
+->RET:(221, '2.0.0 got001865.jeppesensystems.com closing connection')

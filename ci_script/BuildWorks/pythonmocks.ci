@@ -1,0 +1,3 @@
+<-PYT:import smtplib
+<-PYT:smtplib.__path__
+->RET:raise exceptions.AttributeError("'module' object has no attribute '__path__'")

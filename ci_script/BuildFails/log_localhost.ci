@@ -1,0 +1,2 @@
+/users/geoff/.texttest/tmp/ci.23Feb153222.17433/ci/BuildFails/source/main.c: In function 'main':
+/users/geoff/.texttest/tmp/ci.23Feb153222.17433/ci/BuildFails/source/main.c:7: error: expected ';' before 'return'

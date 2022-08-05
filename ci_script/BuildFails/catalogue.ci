@@ -1,0 +1,12 @@
+The following new files/directories were created:
+<Test Directory>
+----logs
+--------.build20150223153224
+------------log.localhost
+------------log.my_other_machine
+------------src_update
+
+The following existing files/directories changed their contents:
+<Test Directory>
+----source
+--------main.c

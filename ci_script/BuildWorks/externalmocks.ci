@@ -1,0 +1,9 @@
+<-CMD:cd /users/geoff/.texttest/tmp/ci.23Feb152902.17164/ci/BuildWorks/source; git pull -u ../repo
+->FIL:source
+->OUT:pulling from ../repo
+searching for changes
+adding changesets
+adding manifests
+adding file changes
+added 1 changesets with 1 changes to 1 files
+1 files updated, 0 files merged, 0 files removed, 0 files unresolved

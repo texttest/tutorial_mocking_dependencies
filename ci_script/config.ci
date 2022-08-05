@@ -1,0 +1,32 @@
+# Full path to the System Under Test (or Java Main Class name)
+executable:${TEXTTEST_ROOT}/scripts/automatic_build.py
+
+# Naming scheme to use for files for stdin,stdout and stderr
+filename_convention_scheme:standard
+
+# Expanded name to use for application
+full_name:Continuous Integration
+
+home_operating_system:posix
+
+# Extra config files to use
+import_config_file:capturemock_config
+
+link_test_path:ssh
+link_test_path:repo
+copy_test_path:source
+
+create_catalogues:true
+
+test_data_ignore:.hg
+test_data_ignore:.git
+
+[run_dependent_text]
+*:[0-9]{14}{REPLACE <timestamp>}
+*:{INTERNAL writedir}{REPLACE <sandbox>}
+
+[unordered_text]
+stdout:Build on
+
+[collate_file]
+*:logs/.build*/*

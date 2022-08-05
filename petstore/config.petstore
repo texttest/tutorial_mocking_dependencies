@@ -8,6 +8,3 @@ full_name:Petstore
 
 import_config_file:capturemock_config
 
-discard_file:stderr
-
-home_operating_system:posix

@@ -1,0 +1,13 @@
+executable:${TEXTTEST_ROOT}/petstore.py
+
+# Naming scheme to use for files for stdin,stdout and stderr
+filename_convention_scheme:standard
+
+# Expanded name to use for application
+full_name:Petstore
+
+import_config_file:capturemock_config
+
+discard_file:stderr
+
+home_operating_system:posix
